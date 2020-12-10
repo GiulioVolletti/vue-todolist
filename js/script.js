@@ -17,13 +17,13 @@ var list = new Vue (
         "fare la spesa",
         "comprare il giornale"
       ],
-      
+
       message: "hello world",
     },
     methods:{
-      deleteItem: function(){
-        console.log("here");
-
+      deleteItem: function(item){
+        console.log(item);
+        this.toDoList.splice(item, 1)
       },
     },
   }

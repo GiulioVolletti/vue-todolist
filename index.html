@@ -11,7 +11,7 @@
   <body>
 
     <ul id="list_item">
-      <li v-for="(listItem, index) in toDoList" > {{listItem}} <i class="far fa-check-circle" @click="deleteItem()"></i> </li>
+      <li v-for="(listItem, index) in toDoList" > {{listItem}} <i class="far fa-check-circle" @click="deleteItem(index)"></i> </li>
 
     </ul>
 
