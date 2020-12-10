@@ -1,6 +1,5 @@
 // Esercizio:
 // - aggiungere un campo di input e un pulsante per aggiungere nuove cose da fare alla lista;
-// - cancellare un item dalla lista, al click sulla relativa icona 'X'.
 // Bonus:
 // - Oltre al click sul pulsante, consentire l'inserimento del nuovo item anche premendo il tasto Invio della tastiera, dopo aver scritto il testo nel campo di input.
 
@@ -17,14 +16,20 @@ var list = new Vue (
         "fare la spesa",
         "comprare il giornale"
       ],
-
+      valueVue:"",
       message: "hello world",
     },
+    // - cancellare un item dalla lista, al click sulla relativa icona 'X'.
     methods:{
       deleteItem: function(item){
         console.log(item);
         this.toDoList.splice(item, 1)
       },
+      addList: function(item){
+        console.log("here");
+        this.toDoList.push(item)
+        console.log(this.valueVue);
+      }
     },
   }
 );
