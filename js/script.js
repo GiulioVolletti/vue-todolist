@@ -26,10 +26,10 @@ var list = new Vue (
         this.toDoList.splice(item, 1)
       },
       addList: function(item){
-        console.log("here");
         this.toDoList.push(item)
         console.log(this.valueVue);
-      }
+      },
+            
     },
   }
 );

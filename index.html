@@ -11,7 +11,7 @@
   <body>
 
     <ul id="list_item">
-      <input  type="text" name="" value="" v-model="valueVue">
+      <input  type="text" name="" value="" v-model="valueVue" v-on:keyup.enter="addList(valueVue)">
       <button  type="button" name="button" @click="addList(valueVue)">submit</button>
       <li v-for="(listItem, index) in toDoList" > {{listItem}} <i class="far fa-check-circle" @click="deleteItem(index)"></i> </li>
 
