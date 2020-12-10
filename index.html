@@ -4,18 +4,26 @@
     <meta charset="utf-8">
     <!-- fontawesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+    <!-- my style css -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Andika+New+Basic:ital@1&display=swap" rel="stylesheet">
     <!-- cdn vue -->
     <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+
     <title>vue to do list</title>
   </head>
   <body>
+<div class="center_flex">
 
-    <ul id="list_item">
-      <input  type="text" name="" value="" v-model="valueVue" v-on:keyup.enter="addList(valueVue)">
-      <button  type="button" name="button" @click="addList(valueVue)">submit</button>
-      <li v-for="(listItem, index) in toDoList" > {{listItem}} <i class="far fa-check-circle" @click="deleteItem(index)"></i> </li>
+  <ul id="list_item">
+    <input  type="text" name="" value="" v-model="valueVue" v-on:keyup.enter="addList(valueVue)">
+    <button  type="button" name="button" @click="addList(valueVue)">Add to List</button>
+    <li v-for="(listItem, index) in toDoList" >{{listItem}} <i class="far fa-check-circle" @click="deleteItem(index)"></i> </li>
 
-    </ul>
+  </ul>
+</div>
 
     <script src="js/script.js" charset="utf-8"></script>
   </body>

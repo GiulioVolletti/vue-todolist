@@ -11,10 +11,10 @@ var list = new Vue (
     data: {
       // - creare una lista di cose da fare e mostrarla in pagina con Vue;
       toDoList:[
-        "cucinare",
-        "fare benzia",
-        "fare la spesa",
-        "comprare il giornale"
+        "Cucinare",
+        "Fare benzia",
+        "Fare la spesa",
+        "Comprare il giornale"
       ],
       valueVue:"",
       message: "hello world",
@@ -27,9 +27,10 @@ var list = new Vue (
       },
       addList: function(item){
         this.toDoList.push(item)
-        console.log(this.valueVue);
+        // console.log(this.valueVue);
+        this.valueVue = "";
       },
-            
+
     },
   }
 );
